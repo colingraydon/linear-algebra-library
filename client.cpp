@@ -3,6 +3,8 @@
 #include <vector>
 
 using namespace std;
+using namespace matrix;
+
 
 int main()
 {
@@ -17,9 +19,16 @@ int main()
     v.printMatrix();
     w.printMatrix();
     v += u;
-    w += v;
-    w -= w;
+    // //w += v;
+    // w -= w;
+    //v + u;
+    // //w + u;
     v.printMatrix();
+    // u.printMatrix();
+    // w.printMatrix();
     u.printMatrix();
-    w.printMatrix();
+    Matrix z = u - v;
+    z.printMatrix();
+    // z = u - v;
+    // z.printMatrix();
 }

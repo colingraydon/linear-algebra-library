@@ -5,9 +5,10 @@
 
 using namespace std;
 
-
-class Matrix
+namespace matrix
 {
+    class Matrix
+    {
     private:
     int m; //holds row size
     int n; //holds column size
@@ -23,14 +24,14 @@ class Matrix
     void randomValueMatrix(); //populate matrix with random values between 1 and 100, mostly for quick testing
 
     //overloaded operators
-    Matrix& Matrix::operator +=(const Matrix& rightOp); //overloaded shorthand addition operator
-    Matrix& Matrix::operator -=(const Matrix& rightOp); //overloaded shorthand addition operator
-    //friend Matrix operator + (const Matrix& leftOp, const Fraction& rightOp); //overloaded addition operator
-   
-
-
-} ;
-
+    friend Matrix operator + (const Matrix& leftOp, const Matrix& rightOp); //overloaded addition operator
+    friend Matrix operator - (const Matrix& leftOp, const Matrix& rightOp); //overloaded addition operator
+    Matrix& operator += (const Matrix& rightOp); //overloaded shorthand addition operator
+    Matrix& operator -= (const Matrix& rightOp); //overloaded shorthand addition operator
+    } ;
 
 #endif
+}
+
+
 
