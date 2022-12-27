@@ -5,7 +5,6 @@
 using namespace std;
 using namespace matrix;
 
-
 int main()
 {
     Matrix t;
@@ -18,7 +17,7 @@ int main()
     u.printMatrix();
     v.printMatrix();
     w.printMatrix();
-    v += u;
+    // v += u;
     // //w += v;
     // w -= w;
     //v + u;
