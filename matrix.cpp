@@ -34,6 +34,24 @@ namespace matrix
         createMatrix();
     }
 
+
+    Matrix::Matrix(double** array, int row, int column) {
+
+        m = row;
+        n = column;
+
+        
+        mat = new double*[row];
+        for (int i = 0; i < row; ++i) {
+            mat[i] = new double[column];
+        }
+
+        for (int i = 0; i < row; ++i) {
+            for (int j = 0; j < column; ++j) {
+                mat[i][j] = array[i][j];
+            }
+        }
+    }
     //parameterized constructor
     Matrix::Matrix(int row, int column)
     {

@@ -17,7 +17,10 @@ namespace matrix
 
     public:
     //Matrix(const Matrix& copyMe); //copy constructor that makes a deep copy 
-    Matrix(); //default constructor
+    Matrix(); //default constructor 
+
+    Matrix(double**);
+
     Matrix(int row, int column); //parameterized constructor, 2 arguments
     ~Matrix(); //deconstructor
     Matrix(const Matrix& copyMe); //copy constructor
